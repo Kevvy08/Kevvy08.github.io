@@ -34,3 +34,29 @@ footer {
   background: #1c1c1c;
   color: white;
 }
+#contact {
+  background: #e7f3f7;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#contact ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#contact li {
+  margin-bottom: 0.8rem;
+}
+
+#contact a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
