@@ -14,13 +14,12 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #4da6ff, #1e90ff); /* light to medium blue gradient */
+  background-color: #003366;  /* dark navy blue */
   color: white;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
 header h1 {
   margin-bottom: 0.5rem;
 }
@@ -45,7 +44,28 @@ section {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
 }
+.about-section {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
 
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
 /* Links */
 a {
   color: #007acc;
