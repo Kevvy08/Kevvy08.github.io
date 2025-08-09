@@ -5,11 +5,18 @@
   box-sizing: border-box;
 }
 
+/* Fonts and Base Styles */
 body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background-color: #f0f8ff; /* very light blue background */
   color: #333;
+}
+
+/* Headers (h1, h2, etc) use Merriweather */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
 }
 
 /* Header */
@@ -20,18 +27,25 @@ header {
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 header h1 {
   margin-bottom: 0.5rem;
 }
 
+nav {
+  margin-top: 1rem;
+}
+
 nav a {
-  color: 80c1ff;
+  color: #80c1ff;   /* light sky blue */
   margin: 0 1rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
+  color: #ffffff;   /* white on hover */
   text-decoration: underline;
 }
 
@@ -44,50 +58,59 @@ section {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
 }
+
+/* About Section with Blue Gradient */
 .about-section {
-    background: linear-gradient(135deg, #007BFF, #0056b3);
-    color: white;
-    padding: 40px;
-    border-radius: 12px;
-    max-width: 700px;
-    margin: 40px auto;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
-.about-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.about-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-/* Links */
-a {
-  color: #007acc;
+/* Buttons (used for project links and contact) */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 8px 0;
+  background-color: #007acc;
+  color: white;
+  border-radius: 5px;
   text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.btn:hover {
+  background-color: #005fa3;
 }
 
 /* Contact Section */
 #contact {
   background: #e6f4ff; /* pale light blue */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
 }
 
-#contact ul {
-  list-style-type: none;
+/* Contact list styles */
+.contact-list {
+  list-style: none;
   padding-left: 0;
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-#contact li {
-  margin-bottom: 0.8rem;
+.contact-list li {
+  margin: 0;
 }
 
 /* Footer */
@@ -99,3 +122,31 @@ footer {
   margin-top: 1rem;
   box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  nav {
+    display: block;
+    margin-top: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 95%;
+  }
+
+  .contact-list {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}    
