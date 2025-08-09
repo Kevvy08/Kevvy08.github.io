@@ -1,46 +1,64 @@
-body {
-  font-family: sans-serif;
-  line-height: 1.6;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f8ff; /* very light blue background */
   color: #333;
 }
 
+/* Header */
 header {
-  background: #1c1c1c;
-  color: #fff;
+  background: linear-gradient(135deg, #4da6ff, #1e90ff); /* light to medium blue gradient */
+  color: white;
   padding: 2rem;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
 }
 
 nav a {
-  color: #00d4ff;
+  color: #e6f4ff;
   margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  background: white;
+  margin: 1rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+/* Links */
+a {
+  color: #007acc;
   text-decoration: none;
 }
 
-section {
-  padding: 2rem;
-  background: #fff;
-  margin: 1rem auto;
-  max-width: 800px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+a:hover {
+  text-decoration: underline;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #1c1c1c;
-  color: white;
-}
+/* Contact Section */
 #contact {
-  background: #e7f3f7;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background: #e6f4ff; /* pale light blue */
 }
 
 #contact ul {
@@ -52,11 +70,12 @@ footer {
   margin-bottom: 0.8rem;
 }
 
-#contact a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  text-decoration: underline;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e90ff; /* medium blue */
+  color: white;
+  margin-top: 1rem;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
 }
