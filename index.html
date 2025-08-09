@@ -2,8 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kudzai Kelvin Bandera | Personal Website</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,13 +27,11 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-  
-  <section class="about-section">
+
+  <section id="about" class="about-section">
     <h2>About Me</h2>
     <p>
-        I’m an aspiring engineer passionate about electronics, coding, and creative problem solving.  
-        I love turning ideas into working projects, from circuits to websites, and I’m always learning new skills to push boundaries.  
-        Let’s build something amazing together!
+      I’m an electronic engineering student passionate about renewable energy, embedded systems, and sustainable innovation. I’m currently learning how to build my own solar systems and aim to start a tech-powered energy company in Zimbabwe.
     </p>
   </section>
 
@@ -32,17 +41,17 @@
       <li>
         <strong>Variable Power Supply</strong> – A custom 0–30V variable power supply unit.
         <br />
-        <a href="https://github.com/Kevvy08/0V-30V-Vriable-power-supply" target="_blank">View Code on GitHub</a>
+        <a href="https://github.com/Kevvy08/0V-30V-Vriable-power-supply" target="_blank" class="btn">View Code on GitHub</a>
       </li>
       <li>
         <strong>Traffic Light System</strong> – PIC16F84A Assembly project simulating an intersection.
         <br />
-        <a href="https://github.com/Kevvy08/LED-Control-Using-PIC16F84A-Microcontroller/blob/main/README.md" target="_blank">View Code on GitHub</a>
+        <a href="https://github.com/Kevvy08/LED-Control-Using-PIC16F84A-Microcontroller/blob/main/README.md" target="_blank" class="btn">View Code on GitHub</a>
       </li>
       <li>
         <strong>Student Management System</strong>.
         <br />
-        <a href="https://github.com/Kevvy08/Simple-Student-Management-System-in-C-" target="_blank">View Code on GitHub</a>
+        <a href="https://github.com/Kevvy08/Simple-Student-Management-System-in-C-" target="_blank" class="btn">View Code on GitHub</a>
       </li>
     </ul>
   </section>
@@ -50,11 +59,32 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <p>You can reach me through the following channels:</p>
-    <ul>
-      <li>Email: <a href="mailto:kudzaib74@gmail.com">kudzaib74@gmail.com</a></li>
-      <li>GitHub: <a href="https://github.com/Kevvy08" target="_blank">Kevvy08</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/kudzai-bandera-499415294" target="_blank">LinkedIn Profile</a></li>
-      <li>Phone: +263 788 303 081</li>
+    <ul class="contact-list">
+      <li>
+        <a href="mailto:kudzaib74@gmail.com" class="btn">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Kevvy08" target="_blank" class="btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/kudzai-bandera-499415294" target="_blank" class="btn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="tel:+263788303081" class="btn">
+          <i class="fas fa-phone"></i> +263 788 303 081
+        </a>
+      </li>
+      <li>
+        <a href="files/Kudzai_Kelvin_Bandera_CV.pdf" download class="btn">
+          <i class="fas fa-file-download"></i> Download CV
+        </a>
+      </li>
     </ul>
   </section>
 
@@ -62,4 +92,4 @@
     <p>&copy; 2025 Kudzai Kelvin Bandera. All rights reserved.</p>
   </footer>
 </body>
-          </html>
+</html>
