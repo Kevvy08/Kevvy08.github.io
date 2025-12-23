@@ -1,35 +1,29 @@
-/* General Reset */
+  /* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fonts and Base Styles */
+/* BASE */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #f0f8ff; /* very light blue background */
+  background-color: #f0f8ff;
   color: #333;
 }
 
-/* Headers (h1, h2, etc) use Merriweather */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: 'Merriweather', serif;
-  font-weight: 700;
 }
 
-/* Header */
+/* HEADER */
 header {
-  background-color: #003366;  /* dark navy blue */
+  background-color: #003366;
   color: white;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  margin-bottom: 0.5rem;
 }
 
 nav {
@@ -37,116 +31,147 @@ nav {
 }
 
 nav a {
-  color: #80c1ff;   /* light sky blue */
+  color: #80c1ff;
   margin: 0 1rem;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffffff;   /* white on hover */
+  color: #ffffff;
   text-decoration: underline;
 }
 
-/* Sections */
+/* SECTIONS */
 section {
   padding: 2rem;
   background: white;
-  margin: 1rem auto;
-  max-width: 800px;
-  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  animation: fadeUp 0.8s ease-in-out;
 }
 
-/* About Section with Blue Gradient */
+/* ABOUT */
 .about-section {
   background: linear-gradient(135deg, #007BFF, #0056b3);
   color: white;
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 700px;
-  margin: 40px auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   text-align: center;
 }
 
-/* Buttons (used for project links and contact) */
+/* EXPERIENCE */
+.experience-card {
+  border-left: 5px solid #007acc;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.company {
+  font-weight: 600;
+  color: #005fa3;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* SOLAR PROJECTS */
+.section-intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.solar-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.solar-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.solar-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solar-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* BUTTONS */
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  margin: 8px 0;
   background-color: #007acc;
   color: white;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  margin-top: 8px;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: #005fa3;
+  transform: translateY(-2px);
 }
 
-/* Contact Section */
+/* CONTACT */
 #contact {
-  background: #e6f4ff; /* pale light blue */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
+  background: #e6f4ff;
 }
 
-/* Contact list styles */
 .contact-list {
   list-style: none;
-  padding-left: 0;
-  max-width: 320px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
-.contact-list li {
-  margin: 0;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #1e90ff; /* medium blue */
+  background: #1e90ff;
   color: white;
-  margin-top: 1rem;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-    text-align: center;
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  nav {
-    display: block;
-    margin-top: 20px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .solar-content {
+    grid-template-columns: 1fr;
   }
 
   nav a {
     display: block;
     margin: 10px 0;
   }
-
-  section {
-    padding: 1rem;
-    margin: 1rem;
-    max-width: 95%;
-  }
-
-  .contact-list {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-}    
+}
